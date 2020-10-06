@@ -1,16 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "MyApp"
-		},
-		{
-			"path": "FunctionsWithStructs"
-		},
-		{
-			"path": "FunctionsWithTypedefStructs"
-		},
-		{
 			"path": "BasicStruct"
+		},
+		{
+			"path": "FunctionsAndStructs"
+		},
+		{
+			"path": "FunctionsFilesAndStructs"
+		},
+		{
+			"path": "FunctionsFilesAndTypedefStructs"
+		},
+		{
+			"path": "LibraryOfBooks"
 		}
 	],
 	"settings": {

@@ -14,6 +14,11 @@ struct point {
 	int y;
 };
 
+/* Declarations for point struct related functions */
+struct point MakePoint(int x, int y);
+struct point AddPoint(struct point p1, struct point p2);
+void PrintPoint(struct point p);
+
 int main(void) {
 
    printf("Fun With Structs!\n");
@@ -23,26 +28,27 @@ int main(void) {
 	printf("Point A: x = %d, y = %d\n",a.x,a.y);
 	printf("Point B: x = %d, y = %d\n",b.x,b.y);
 
-	/* Size of a struct */
-	printf("The size of the point struct is: %ld bytes\n", sizeof (struct point));
+	/* Create a point using the makepoint function() */
+	struct point c = MakePoint(3,7);
+	struct point d = MakePoint(7,15);
+	printf("The value of point c: ");
+	PrintPoint(c);
 
-	/* Experiment with pointers to structs */
+	printf("The value of point d: ");
+	PrintPoint(d);
+
+	/* Use the addpoint function to create a new point */
+	struct point e = AddPoint(c,d);
+
+	printf("The value of point e: ");
+	PrintPoint(e);
+
+	/* Experiment with points to structs */
 	struct point origin = {0,0};
-	struct point *originPtr = NULL;
-	originPtr = &origin;
-	printf("Point origin addr (stack): %p\n",originPtr);
-
-	/* When have a pointer to a struct and we want to 
-	 *    access its fields, we can use the generic dereference 
-	 *    operator (*ptr) to get access to the struct itself and
-	 *    then use the dot operator to access the individual fields. */
-	printf("Point origin value: x = %d, y = %d\n", (*originPtr).x, (*originPtr).y);
-
-	/* However, working with pointers to structs in C is such a 
-	 *    common activity that the -> operator was added to 
-	 *    combine both the dereference and the field access
-	 *    into a single operation */
-	printf("Point origin value: x = %d, y = %d\n", originPtr->x, originPtr->y);
+	struct point *p;
+	p = &origin;
+	printf("Point origin addr (stack): %p\n",p);
+	printf("Point origin value: x = %d, y = %d\n",p->x,p->y);
 
    return 0;
 }
