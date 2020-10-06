@@ -4,10 +4,10 @@
 			"path": "MyApp"
 		},
 		{
-			"path": "ArrayOfStructs"
+			"path": "FunctionsWithStructs"
 		},
 		{
-			"path": "FunctionsWithStructs"
+			"path": "FunctionsWithTypedefStructs"
 		}
 	],
 	"settings": {
