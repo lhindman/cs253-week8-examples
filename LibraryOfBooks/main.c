@@ -16,5 +16,29 @@ Library mylib;
 int main(void) {
 
 	InitLibrary(&mylib,"Hindman Public Library");
+
+	Book a = {"Eye Of The World", "Robert Jordan", 782};
+	AddLibraryBook(&mylib,&a);
+
+	Book b = {"Great Hunt", "Robert Jordan", 706};
+	AddLibraryBook(&mylib,&b);
+
+	Book c = {"Dragon Reborn", "Robert Jordan", 624};
+	AddLibraryBook(&mylib,&c);
+
+	Book d = {"Shadow Rising", "Robert Jordan", 1007};
+	AddLibraryBook(&mylib,&d);
+
+	Book * lightReading = CheckoutLibraryBook(&mylib,2);
+
+	DisplayLibraryBooks(&mylib);
+
+	ReturnLibraryBook(&mylib,lightReading);
 	
+	DisplayLibraryBooks(&mylib);
+
+	RemoveLibraryBook(&mylib,0);
+
+	DisplayLibraryBooks(&mylib);
+
 }

@@ -138,7 +138,7 @@ int DisplayLibraryBooks(Library * libraryPtr) {
         if (rc < 0) {
             printf("Error reading book at index: %d\n", i);
         } else {
-            printf("%s\n",bookBuffer);
+            printf("%4d - %s (%s)\n", i, bookBuffer, libraryPtr->isAvail[i]?"available":"checked out");
         }
     }
 

@@ -8,8 +8,8 @@
  */
 #ifndef __BOOK_H
 #define __BOOK_H
-
 #include <stdio.h>
+
 #define MAX_BOOK_FIELD_SIZE 60
 
 /* Define book struct */

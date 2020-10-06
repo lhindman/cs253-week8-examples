@@ -12,7 +12,6 @@
 #include <stdbool.h>
 #include "Book.h"
 
-
 #define MAX_LIBRARY_FIELD_SIZE 60
 #define MAX_LIBRARY_BOOKS 8
 
