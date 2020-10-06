@@ -13,8 +13,8 @@
 #include "Book.h"
 
 
-const int MAX_LIBRARY_FIELD_SIZE = 60;
-const int MAX_LIBRARY_BOOKS = 8;
+#define MAX_LIBRARY_FIELD_SIZE 60
+#define MAX_LIBRARY_BOOKS 8
 
 /* define library struct */
 struct library {
@@ -22,6 +22,7 @@ struct library {
     Book books[MAX_LIBRARY_BOOKS];      /* Array of book structs */
     bool isAvail[MAX_LIBRARY_BOOKS];    /* Availability status of cooresponding book by index */
     int numBooks;                       /* Number of books currently stored in library */
+    
 };
 
 /* define Library type */

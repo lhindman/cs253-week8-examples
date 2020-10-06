@@ -141,4 +141,6 @@ int DisplayLibraryBooks(Library * libraryPtr) {
             printf("%s\n",bookBuffer);
         }
     }
+
+    return 0;
 }

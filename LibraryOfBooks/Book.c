@@ -6,6 +6,7 @@
  *    project from CS121 to demonstrate the use of structs
  *    in C. 
  */
+#include <string.h>
 #include "Book.h"
 
 int SetBookAuthor(Book * bookPtr, const char author[]) {

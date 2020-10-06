@@ -10,8 +10,7 @@
 #define __BOOK_H
 
 #include <stdio.h>
-
-const int MAX_BOOK_FIELD_SIZE = 60;
+#define MAX_BOOK_FIELD_SIZE 60
 
 /* Define book struct */
 struct book {
