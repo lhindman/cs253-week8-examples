@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "FunctionsWithTypedefStructs"
+		},
+		{
+			"path": "BasicStruct"
 		}
 	],
 	"settings": {
