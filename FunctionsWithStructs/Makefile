@@ -3,6 +3,7 @@ CC = gcc
 
 # Setup a variable to hold desired compiler flags
 CFLAGS = -Wall -Wextra -Wpointer-arith -Wstrict-prototypes -std=c99 -g
+LDFLAGS = -lm
 
 # Declaring the build, test and clean rules as phony means that no artifact
 #   is created by these rules with a cooresponding name.  Therefore, the
@@ -14,8 +15,8 @@ CFLAGS = -Wall -Wextra -Wpointer-arith -Wstrict-prototypes -std=c99 -g
 build: myprog
 
 
-myprog: main.o 
-	$(CC) $(CFLAGS) $^ -o $@ 
+myprog: main.o Point.o Rect.o
+	$(CC) $(CFLAGS) $^ -o $@  $(LDFLAGS)
 
 
 test:
