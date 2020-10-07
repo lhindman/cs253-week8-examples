@@ -15,7 +15,6 @@ struct point {
 /* Definition of Point type */
 typedef struct point Point;
 
-
 /* Declarations for point struct related functions */
 Point MakePoint(int x, int y);
 Point AddPoint(Point p1, Point p2);

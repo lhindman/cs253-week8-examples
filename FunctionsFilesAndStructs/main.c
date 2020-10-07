@@ -12,7 +12,7 @@
 
 int main(void) {
 
-   printf("Fun With Structs!\n");
+    printf("Fun With Structs!\n");
 
 	/* Create a point and store some data in it. */
 	struct point a = {0,0},b = {15,20};

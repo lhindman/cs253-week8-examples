@@ -16,7 +16,7 @@ struct point {
 
 int main(void) {
 
-   printf("Fun With Structs!\n");
+    printf("Fun With Structs!\n");
 
 	/* Create a point and store some data in it. */
 	struct point a = {0,0},b = {15,20};
@@ -28,7 +28,7 @@ int main(void) {
 
 	/* Experiment with pointers to structs */
 	struct point origin = {0,0};
-	struct point *originPtr = NULL;
+	struct point * originPtr = NULL;
 	originPtr = &origin;
 	printf("Point origin addr (stack): %p\n",originPtr);
 
@@ -45,24 +45,4 @@ int main(void) {
 	printf("Point origin value: x = %d, y = %d\n", originPtr->x, originPtr->y);
 
    return 0;
-}
-
-/* makepoint: make a point from x and y components */
-struct point MakePoint(int x, int y) {
-	struct point temp;
-	temp.x = x;
-	temp.y = y;
-	return temp;
-}
-
-/* addpoint: add two points */
-struct point AddPoint(struct point p1, struct point p2) {
-	p1.x += p2.x;
-	p1.y += p2.y;
-	return p1;
-}
-
-/* printpoint: display a point on stdout */
-void PrintPoint(struct point p) {
-	printf("(%d,%d)\n",p.x,p.y);
 }
