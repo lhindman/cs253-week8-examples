@@ -40,7 +40,7 @@ int SetBookTitle(Book * bookPtr, const char title[]) {
     /* handle the situation where bookPtr->author is not
      *   null terminated after strncpy. This has no effect
      *   on when total copied is less than MAX_BOOK_FIELD_SIZE. */
-    bookPtr->author[MAX_BOOK_FIELD_SIZE-1] = '\0';
+    bookPtr->title[MAX_BOOK_FIELD_SIZE-1] = '\0';
 
     return strlen(bookPtr->title);
 }

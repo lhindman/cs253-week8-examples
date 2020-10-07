@@ -41,7 +41,7 @@ int InitLibrary(Library * libraryPtr, const char name[]);
  * AddLibraryBook: Make of copy of the Book struct referenced
  *    by bookPtr and store it in the Library struct referenced by
  *    libraryPtr.
- * libraryPtr: Pointer to library struct to be initialized
+ * libraryPtr: Pointer to library struct
  * bookPtr: Pointer to book struct to be copied into library
  * 
  * return: 0 on success, -1 on error  
@@ -62,7 +62,7 @@ int RemoveLibraryBook(Library * libraryPtr, int bookIndex);
 /* 
  * CheckoutLibraryBook:  Determine if the book at the specified
  *     index is available and if so, mark it as unavailable and
- *     teturn a pointer to the book struct
+ *     return a pointer to the book struct
  *     at the specified index. Return NULL if unavailable or error 
  * libraryPtr: Pointer to library struct 
  * bookIndex: Index of book to be checked out

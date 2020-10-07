@@ -29,11 +29,11 @@ int main(void) {
 	Book d = {"Shadow Rising", "Robert Jordan", 1007};
 	AddLibraryBook(&mylib,&d);
 
-	Book * lightReading = CheckoutLibraryBook(&mylib,2);
+	Book * lightReadingPtr = CheckoutLibraryBook(&mylib,2);
 
 	DisplayLibraryBooks(&mylib);
 
-	ReturnLibraryBook(&mylib,lightReading);
+	ReturnLibraryBook(&mylib,lightReadingPtr);
 	
 	DisplayLibraryBooks(&mylib);
 

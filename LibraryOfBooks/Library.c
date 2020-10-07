@@ -66,7 +66,7 @@ int RemoveLibraryBook(Library * libraryPtr, int bookIndex) {
      *    specified index down by one */
     for (int i = bookIndex + 1; i < libraryPtr->numBooks; i++) {
         memcpy(&libraryPtr->books[i-1], &libraryPtr->books[i], sizeof(Book));
-        libraryPtr->isAvail[i-1] = libraryPtr->isAvail[i-1];
+        libraryPtr->isAvail[i-1] = libraryPtr->isAvail[i];
     }
     libraryPtr->numBooks--;
 

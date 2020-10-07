@@ -60,7 +60,7 @@ int SetBookPages(Book * bookPtr, unsigned int pages);
  * BookToString: Generate a null terminated string
  *     representation of the specified Book struct
  *     and store it in the provided char buffer.
- * bookPtr: Pointer to book struct to be modified
+ * bookPtr: Pointer to book struct 
  * buffer: Reference (aka pointer) to char buffer of sufficient
  *     size to store string representation of Book
  * bufferSize: The size of the buffer in bytes
