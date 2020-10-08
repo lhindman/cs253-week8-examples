@@ -1,6 +1,6 @@
 /*
  * Author: Luke Hindman
- * Date: Tue 06 Oct 2020 03:41:05 PM PDT
+ * Date: Thu 08 Oct 2020 10:01:53 AM PDT
  * Description: Partial implementation of the LibraryOfBooks
  *    project from CS121 to demonstrate the use of struct in C. 
  */
@@ -30,9 +30,9 @@ Book * UserReturnBook(Book * myBookPtr);
 int main(void) {
 
 	/* Variables */
-	bool running = true;
-	char selection;
-	Book * lightReadingPtr = NULL;
+	bool running = true;				/* Menu Loop Variable */
+	char selection;						/* Menu Selection Variable */
+	Book * lightReadingPtr = NULL;		/* Currently checked out Book object, NULL for none */
 
 	/* Initialize the Library object*/
 	InitLibrary(&mylib,"Hindman Public Library");
@@ -216,7 +216,8 @@ Book * UserReturnBook(Book * myBookPtr ) {
  * 
  *    This is specific to Linux / Unix type systems, and I while
  *    I am not the original author you are welcome to use it 
- *    in your own code */
+ *    in your own code and share it with your students 15 years
+ *    from now. :) */
 void UserPressAnyKey(void) {
 	struct termios oldt, newt;
 
@@ -233,5 +234,4 @@ void UserPressAnyKey(void) {
 	getchar();
 	/* Restore original terminal attributes for STDIN */
 	tcsetattr ( STDIN_FILENO, TCSANOW, &oldt );
-
 }
